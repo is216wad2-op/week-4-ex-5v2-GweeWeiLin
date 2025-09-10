@@ -14,18 +14,34 @@
             padding-top: 60px;
         }
 
-        /* Add CSS code here */ 
+        /* Add CSS code here */
+        #square {
+            width: 150px;
+            height: 150px;
+            background-color: goldenrod;
+            text-align: center;
+            padding-top: 60px;
+        }
 
     </style>
 </head>
 <body>
-        
+        <!-- if you use onsomething in HTML, you need to end the function with ()
+        if you use addEventListener in JS, you do not need to end the function with () -->
         <div id="circle" onmouseover="mOver(this)" onmouseout="mOut(this)" >
             Mouse Over Me
         </div>
-        
+
         <script>
            // add code here
+           function mOver(obj){
+            obj.id="square";
+            obj.style.paddingTop = "20px";
+           }
+           function mOut(obj){
+            obj.id="circle";
+            obj.style.paddingTop = "60px";
+           }
         </script>
                 
 </body>
